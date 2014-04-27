@@ -1,17 +1,18 @@
 var express    = require("express");
 var logfmt     = require("logfmt");
-var travisPing = require('travis-ping');
+var travisPing = require("./travis-ping");
 
 var app = express();
 app.use(logfmt.requestLogger());
 
 app.get('/deploy', function(req, res) {
-  var username    = process.env.GH_USER
   var travisToken = process.env.TRAVIS_TOKEN
   var repo        = process.env.GH_REPO
-  travisPing.ping(username, travisToken, repo, function(travisResponse) {
-    res.send(travisResponse);
-  })
+
+  travisPing(travisToken, repo, function(err, result) {
+    console.log('hi');
+    res.send(result);
+  });
 });
 
 var port = Number(process.env.PORT || 5000);

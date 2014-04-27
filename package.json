@@ -19,6 +19,6 @@
   "dependencies": {
     "logfmt": "^1.1.2",
     "express": "^4.1.0",
-    "travis-ping": "^0.2.0"
+    "request-json": "^0.4.10"
   }
 }
