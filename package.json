@@ -1,0 +1,24 @@
+{
+  "name": "collective-archive-deployer",
+  "version": "0.0.0",
+  "description": "",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:collective-archive/collective-archive-deployer.git"
+  },
+  "author": "Collective Archive",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/collective-archive/collective-archive-deployer/issues"
+  },
+  "homepage": "https://github.com/collective-archive/collective-archive-deployer",
+  "dependencies": {
+    "logfmt": "^1.1.2",
+    "express": "^4.1.0",
+    "travis-ping": "^0.2.0"
+  }
+}
