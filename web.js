@@ -10,7 +10,6 @@ app.get('/deploy', function(req, res) {
   var repo        = process.env.GH_REPO
 
   travisPing(travisToken, repo, function(err, result) {
-    console.log('hi');
     res.send(result);
   });
 });

@@ -23,8 +23,7 @@ var travisPing = function(token, repo, cb) {
     var lastBuild = body[0].id;
 
     post('/requests', token, { 'build_id': lastBuild }, function(err, body) {
-      console.log(body);
-      cb(body);
+      cb(err, body);
     });
   });
 };
